@@ -83,7 +83,7 @@ public class ComponentUtils {
         //builds sightly html file using htl template from resource.
         createHtl();
 
-        LOG.info("--------------* Component '" + generationConfig.getName() + "' successfully generated *--------------");
+        LOG.info("--------------* Component '{}' successfully generated *--------------", generationConfig.getName());
 
     }
 

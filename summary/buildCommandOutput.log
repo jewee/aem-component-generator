@@ -1,0 +1,75 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< adobe:component-generator >----------------------
+[INFO] Building component-generator 1.2.4-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ component-generator ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ component-generator ---
+[INFO] Copying 7 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ component-generator ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 29 source files with javac [debug release 17] to target/classes
+[INFO] /ramdisk/code/src/main/java/com/adobe/aem/compgenerator/javacodemodel/JavaCodeModel.java: Some input files use or override a deprecated API.
+[INFO] /ramdisk/code/src/main/java/com/adobe/aem/compgenerator/javacodemodel/JavaCodeModel.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ component-generator ---
+[INFO] skip non existing resourceDirectory /ramdisk/code/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ component-generator ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ component-generator ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ component-generator ---
+[INFO] Building jar: /ramdisk/code/target/component-generator-1.2.4-SNAPSHOT.jar
+[INFO] 
+[INFO] --- assembly:3.6.0:single (default) @ component-generator ---
+[WARNING] Artifact: adobe:component-generator:jar:1.2.4-SNAPSHOT references the same file as the assembly destination file. Moving it to a temporary location for inclusion.
+[INFO] Building jar: /ramdisk/code/target/component-generator-1.2.4-SNAPSHOT.jar
+[WARNING] Configuration option 'appendAssemblyId' is set to false.
+Instead of attaching the assembly file: /ramdisk/code/target/component-generator-1.2.4-SNAPSHOT.jar, it will become the file for main project artifact.
+NOTE: If multiple descriptors or descriptor-formats are provided for this project, the value of this file will be non-deterministic!
+[WARNING] Replacing pre-existing project main-artifact file: /ramdisk/code/target/archive-tmp/component-generator-1.2.4-SNAPSHOT.jar
+with assembly file: /ramdisk/code/target/component-generator-1.2.4-SNAPSHOT.jar
+[INFO] 
+[INFO] --- antrun:3.1.0:run (smoketest-generation-example-basedir) @ component-generator ---
+[INFO] No Ant target defined - SKIPPED
+[INFO] 
+[INFO] --- exec:3.3.0:exec (smoketest-generation-example) @ component-generator ---
+2024-08-20T12:36:05.644831320Z main WARN Runtime environment or build system does not support multi-release JARs. This will impact location-based features.
+[12:36:05.642 [INFO ] CommonUtils @91] - Created: /ramdisk/code/target/smoketest/ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.690 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/_cq_dialog/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.701 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/dialogglobal/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.706 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/dialogshared/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.711 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/_cq_design_dialog/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.714 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.716 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/site/.content.xml
+WARNING: Supplied DOM uses namespaces, but is not created as namespace-aware
+[12:36:05.717 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/site/css/demo-comp.less
+[12:36:05.718 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/site/css.txt
+[12:36:05.719 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/site/js/demo-comp.js
+[12:36:05.720 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/clientlibs/site/js.txt
+[12:36:05.721 [INFO ] CommonUtils @91] - Created: ui.apps/src/main/content/jcr_root/apps/newco/components/content/demo-comp/demo-comp.html
+[12:36:05.721 [INFO ] ComponentUtils @86] - --------------* Component 'demo-comp' successfully generated *--------------
+[12:36:05.755 [INFO ] CommonUtils @91] - Created: core/src/main/java/com/newco/aem/base/core/models/impl/DemoCompImpl.java
+[12:36:05.762 [INFO ] CommonUtils @91] - Created: core/src/main/java/com/newco/aem/base/core/models/impl/DemoLinkImpl.java
+[12:36:05.764 [INFO ] CommonUtils @91] - Created: core/src/main/java/com/newco/aem/base/core/models/DemoComp.java
+[12:36:05.765 [INFO ] CommonUtils @91] - Created: core/src/main/java/com/newco/aem/base/core/models/DemoLink.java
+[12:36:05.766 [INFO ] JavaCodeModel @89] - --------------* Sling Model successfully generated *--------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.023 s
+[INFO] Finished at: 2024-08-20T12:36:05Z
+[INFO] ------------------------------------------------------------------------

@@ -5,10 +5,9 @@ import com.adobe.aem.compgenerator.exceptions.GeneratorException;
 import com.adobe.aem.compgenerator.models.GenerationConfig;
 import com.sun.codemodel.*;
 import org.apache.commons.lang3.StringUtils;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
@@ -57,7 +56,7 @@ public class TestClassBuilder extends JavaCodeBuilder {
         if (junitVersion == Constants.JUNIT_VERSION_5) {
             setUpMethod.annotate(codeModel.ref(BeforeEach.class));
         } else if ((junitVersion == Constants.JUNIT_VERSION_4)) {
-            setUpMethod.annotate(codeModel.ref(Before.class));
+            setUpMethod.annotate(codeModel.ref(BeforeEach.class));
         } else {
             throw new GeneratorException(JUNIT_UNSUPPORTED_VERSION_EXCEPTION);
         }
@@ -74,7 +73,7 @@ public class TestClassBuilder extends JavaCodeBuilder {
                     if (junitVersion == Constants.JUNIT_VERSION_5) {
                         addTestMethod(jc, entry.getValue(), org.junit.jupiter.api.Test.class, org.junit.jupiter.api.Assertions.class);
                     } else if (junitVersion == Constants.JUNIT_VERSION_4) {
-                        addTestMethod(jc, entry.getValue(), Test.class, Assert.class);
+                        addTestMethod(jc, entry.getValue(), org.junit.jupiter.api.Test.class, org.junit.jupiter.api.Assertions.class);
                     } else {
                         throw new GeneratorException(JUNIT_UNSUPPORTED_VERSION_EXCEPTION);
                     }

@@ -59,7 +59,7 @@ public class CommonUtils {
                 mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
                 return mapper.readValue(jsonDataFile, GenerationConfig.class);
             } catch (IOException e) {
-                throw new GeneratorException(String.format("Exception while reading config file. %n %s", e.getMessage()), e);
+                throw new GeneratorException("Exception while reading config file. %n %s".formatted(e.getMessage()), e);
             }
         }
         return null;
@@ -81,14 +81,14 @@ public class CommonUtils {
 
             boolean isSuccess = file.renameTo(oldFile);
             if (isSuccess) {
-                LOG.info("Replaced: " + path + " (Old file: " + oldFile.getName() + ")");
+                LOG.info("Replaced: {} (Old file: {})", path, oldFile.getName());
                 return file;
             } else {
                 throw new IOException();
             }
         }
 
-        LOG.info("Created: " + path);
+        LOG.info("Created: {}", path);
         return file;
     }
 
@@ -117,7 +117,7 @@ public class CommonUtils {
             String content = reader.lines().collect(Collectors.joining(System.lineSeparator()));
             return stringSubstitutor.replace(content);
         } catch (IOException e) {
-            LOG.error("Failed to read " + filePath + " from the classpath.", e);
+            LOG.error("Failed to read {} from the classpath.", filePath, e);
         }
         return null;
     }
